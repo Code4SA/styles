@@ -10,6 +10,21 @@
 $font-family-sans-serif: 'Asap', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Roboto Slab', Times, serif;
 
+$headings-font-weight: 700;
+
+h1, h5, h6{
+	text-transform: uppercase;
+}
+
+h2, h3, h4{
+	font-family: $font-family-serif !important;
+}
+
+h5, h6{
+	font-weight: 400 !important;
+	letter-spacing: 2px;
+}
+
 // =============================================
 
 // IMPORT BOOTSTRAP
