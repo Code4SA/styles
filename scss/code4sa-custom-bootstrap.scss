@@ -3,7 +3,16 @@
 // CODE4SA CUSTOMISATIONS
 
 //== Colors
+
+$brand-primary: darken(#428bca, 6.5%) !default;
+
 $black: #000;
+
+$gray: #ccc;
+$gray-darker: darken($gray, 16%);
+$gray-dark: darken($gray, 8%);
+$gray-light: lighten($gray, 8%);
+$gray-lighter: lighten($gray, 16%);
 
 //== Typography
 
@@ -37,6 +46,37 @@ h5, h6{
 
 //** Global text color on `<body>`.
 $text-color: $black;
+
+//== Navbar
+
+$navbar-height: 120px !default;
+$navbar-margin-bottom: 0;
+$navbar-border-radius: 0;
+
+$navbar-default-color: $black;
+$navbar-default-bg: $gray-light;
+$navbar-default-border: none;
+
+$navbar-default-link-color: $black;
+$navbar-default-link-hover-color: $black;
+$navbar-default-link-hover-bg: transparent !default;
+$navbar-default-link-active-color: $black !default;
+$navbar-default-link-active-bg: transparent !default;
+$navbar-default-link-disabled-color: $black !default;
+$navbar-default-link-disabled-bg: transparent !default;
+
+.navbar{
+	.navbar-brand{
+
+		img{
+			height: 80px;
+			margin-top: -30px;
+		}
+	}
+	font-weight: 700;
+	border: none !important;
+	border-top: $brand-primary solid 5px !important;
+}
 
 // =============================================
 
