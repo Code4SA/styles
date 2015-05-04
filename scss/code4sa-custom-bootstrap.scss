@@ -1,3 +1,17 @@
+// =============================================
+
+// CODE4SA CUSTOMISATIONS
+
+//== Typography
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+@import url(http://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic);
+
+$font-family-sans-serif: 'Asap', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Roboto Slab', Times, serif;
+
+// =============================================
+
 // IMPORT BOOTSTRAP
 
 // Core variables and mixins
@@ -51,9 +65,4 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-// =============================================
-
-// CODE4SA CUSTOMISATIONS
-
-// 
 
