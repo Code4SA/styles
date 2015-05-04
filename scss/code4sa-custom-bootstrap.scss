@@ -12,6 +12,10 @@ $font-family-serif: 'Arvo', Times, serif;
 
 $headings-font-weight: 700;
 
+h1{
+	letter-spacing: 1px;
+}
+
 h1, h5, h6{
 	text-transform: uppercase;
 }
