@@ -1,6 +1,6 @@
 // =============================================
 
-// CODE4SA CUSTOMISATIONS
+// CODE4SA BOOTSTRAP VARIABLE OVERRIDES
 
 //== Colors
 
@@ -29,24 +29,6 @@ $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $headings-font-weight: 700;
 
-h1{
-	letter-spacing: 1px;
-}
-
-h1, h5, h6{
-	text-transform: uppercase;
-}
-
-h2, h3, h4{
-	font-family: $font-family-serif !important;
-	font-weight: 500 !important;
-}
-
-h5, h6{
-	font-weight: 400 !important;
-	letter-spacing: 2px;
-}
-
 //== Scaffolding
 
 //** Global text color on `<body>`.
@@ -70,19 +52,6 @@ $navbar-default-link-active-bg: transparent !default;
 $navbar-default-link-disabled-color: $black !default;
 $navbar-default-link-disabled-bg: transparent !default;
 
-.navbar{
-	.navbar-brand{
-
-		img{
-			height: 80px;
-			margin-top: -30px;
-		}
-	}
-	font-weight: 700;
-	border: none !important;
-	border-top: $brand-primary solid 5px !important;
-}
-
 //== Jumbotron
 
 $jumbotron-padding: 60px;
@@ -90,26 +59,6 @@ $jumbotron-color: $white;
 $jumbotron-bg: $brand-primary !default;
 $jumbotron-heading-color: inherit !default;
 $jumbotron-font-size: ceil(($font-size-base * 1.2));
-
-.jumbotron{
-	text-align: center;
-	padding-bottom: $jumbotron-padding + 60px !important;
-	margin-bottom: -40px !important;
-	text-shadow: 0 0 2px $black;
-	h1{
-		font-size: floor(($jumbotron-font-size * 2.6)) !important;
-	}
-}
-
-//== Containers
-.container, .container-fluid{
-	background: $white;
-}
-.jumbotron, .navbar{
-	.container{
-		background: transparent;
-	}
-}
 
 // =============================================
 
@@ -166,4 +115,63 @@ $jumbotron-font-size: ceil(($font-size-base * 1.2));
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
+// =============================================
 
+// CODE4SA BOOTSTRAP CUSTOM STYLING
+
+//== Typography
+
+h1{
+	letter-spacing: 1px;
+}
+
+h1, h5, h6{
+	text-transform: uppercase;
+}
+
+h2, h3, h4{
+	font-family: $font-family-serif;
+	font-weight: 500;
+}
+
+h5, h6{
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+
+//== Navbar
+
+.navbar{
+	.navbar-brand{
+
+		img{
+			height: 80px;
+			margin-top: -30px;
+		}
+	}
+	font-weight: 700;
+	border: none;
+	border-top: $brand-primary solid 5px;
+}
+
+//== Jumbotron
+
+.jumbotron{
+	text-align: center;
+	padding-bottom: $jumbotron-padding + 60px;
+	margin-bottom: -40px;
+	text-shadow: 0 0 2px $black;
+	h1{
+		font-size: floor(($jumbotron-font-size * 2.6));
+	}
+}
+
+//== Containers
+.container, .container-fluid{
+	background: $white;
+}
+.jumbotron, .navbar{
+	.container{
+		background: transparent;
+	}
+}
