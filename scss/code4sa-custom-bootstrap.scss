@@ -7,6 +7,7 @@
 $brand-primary: darken(#428bca, 6.5%) !default;
 
 $black: #000;
+$white: #fff;
 
 $gray: #ccc;
 $gray-darker: darken($gray, 16%);
@@ -21,6 +22,10 @@ $gray-lighter: lighten($gray, 16%);
 
 $font-family-sans-serif: 'Asap', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Arvo', Times, serif;
+
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $headings-font-weight: 700;
 
@@ -76,6 +81,34 @@ $navbar-default-link-disabled-bg: transparent !default;
 	font-weight: 700;
 	border: none !important;
 	border-top: $brand-primary solid 5px !important;
+}
+
+//== Jumbotron
+
+$jumbotron-padding: 60px;
+$jumbotron-color: $white;
+$jumbotron-bg: $brand-primary !default;
+$jumbotron-heading-color: inherit !default;
+$jumbotron-font-size: ceil(($font-size-base * 1.2));
+
+.jumbotron{
+	text-align: center;
+	padding-bottom: $jumbotron-padding + 60px !important;
+	margin-bottom: -40px !important;
+	text-shadow: 0 0 2px $black;
+	h1{
+		font-size: floor(($jumbotron-font-size * 2.6)) !important;
+	}
+}
+
+//== Containers
+.container, .container-fluid{
+	background: $white;
+}
+.jumbotron, .navbar{
+	.container{
+		background: transparent;
+	}
 }
 
 // =============================================
