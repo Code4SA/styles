@@ -5,6 +5,7 @@
 //== Colors
 
 $brand-primary: rgb(0,150,60) !default;
+
 $brand-primary-dark: darken($brand-primary, 8%);
 $brand-primary-darker: darken($brand-primary, 16%);
 $brand-primary-light: ligthen($brand-primary, 8%);
@@ -82,11 +83,13 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 
 //== Jumbotron
 
-$jumbotron-padding: 60px;
+$jumbotron-padding: 80px;
 $jumbotron-color: $white;
 $jumbotron-bg: $brand-primary !default;
 $jumbotron-heading-color: inherit !default;
 $jumbotron-font-size: ceil(($font-size-base * 1.2));
+
+$jumbotron-content-overlap: 30px;
 
 //== mixins
 
@@ -218,7 +221,8 @@ h5, h6{
 
 .jumbotron{
 	@include bg-texture;
-	margin-bottom: -30px;
+	margin-bottom: (0 - $jumbotron-content-overlap);
+	padding-top: $jumbotron-padding + $jumbotron-content-overlap;
 	text-align: center;
 	text-shadow: 0 0 2px $black;
 	h1{
