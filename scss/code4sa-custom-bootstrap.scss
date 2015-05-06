@@ -31,17 +31,17 @@ $headings-font-weight: 700;
 
 //== Scaffolding
 
-//** Global text color on `<body>`.
+//** Global text color on `<body>`
 $text-color: $black;
 
 //== Navbar
 
-$navbar-height: 120px !default;
+$navbar-height: 100px !default;
 $navbar-margin-bottom: 0;
 $navbar-border-radius: 0;
 
 $navbar-default-color: $black;
-$navbar-default-bg: $gray-light;
+$navbar-default-bg: $gray-lighter;
 $navbar-default-border: none;
 
 $navbar-default-link-color: $black;
@@ -49,8 +49,30 @@ $navbar-default-link-hover-color: $black;
 $navbar-default-link-hover-bg: transparent !default;
 $navbar-default-link-active-color: $black !default;
 $navbar-default-link-active-bg: transparent !default;
-$navbar-default-link-disabled-color: $black !default;
+$navbar-default-link-disabled-color: $gray-dark !default;
 $navbar-default-link-disabled-bg: transparent !default;
+
+// Inverted navbar
+
+$navbar-inverse-color:                      $white;
+$navbar-inverse-bg:                         $black;
+$navbar-inverse-border:                     none;
+
+$navbar-inverse-link-color:                 $white;
+$navbar-inverse-link-hover-color:           $white;
+$navbar-inverse-link-hover-bg:              transparent !default;
+$navbar-inverse-link-active-color:          $white;
+$navbar-inverse-link-active-bg:             transparent !default;
+$navbar-inverse-link-disabled-color:        $gray-light !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          #fff !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        #333 !default;
 
 //== Jumbotron
 
@@ -145,8 +167,8 @@ h5, h6{
 	.navbar-brand{
 
 		img{
-			height: 80px;
-			margin-top: -30px;
+			height: 70px;
+			margin-top: -25px;
 		}
 	}
 	font-weight: 700;
@@ -158,20 +180,8 @@ h5, h6{
 
 .jumbotron{
 	text-align: center;
-	padding-bottom: $jumbotron-padding + 60px;
-	margin-bottom: -40px;
 	text-shadow: 0 0 2px $black;
 	h1{
 		font-size: floor(($jumbotron-font-size * 2.6));
-	}
-}
-
-//== Containers
-.container, .container-fluid{
-	background: $white;
-}
-.jumbotron, .navbar{
-	.container{
-		background: transparent;
 	}
 }
