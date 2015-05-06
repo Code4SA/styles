@@ -4,7 +4,11 @@
 
 //== Colors
 
-$brand-primary: darken(#428bca, 6.5%) !default;
+$brand-primary: rgb(0,150,60) !default;
+$brand-primary-dark: darken($brand-primary, 8%);
+$brand-primary-darker: darken($brand-primary, 16%);
+$brand-primary-light: ligthen($brand-primary, 8%);
+$brand-primary-lighter: lighten($brand-primary, 16%);
 
 $black: #000;
 $white: #fff;
@@ -45,9 +49,9 @@ $navbar-default-bg: $gray-lighter;
 $navbar-default-border: none;
 
 $navbar-default-link-color: $black;
-$navbar-default-link-hover-color: $black;
+$navbar-default-link-hover-color: $brand-primary;
 $navbar-default-link-hover-bg: transparent !default;
-$navbar-default-link-active-color: $black !default;
+$navbar-default-link-active-color: $brand-primary !default;
 $navbar-default-link-active-bg: transparent !default;
 $navbar-default-link-disabled-color: $gray-dark !default;
 $navbar-default-link-disabled-bg: transparent !default;
@@ -164,16 +168,22 @@ h5, h6{
 //== Navbar
 
 .navbar{
-	.navbar-brand{
 
-		img{
-			height: 70px;
-			margin-top: -25px;
-		}
-	}
 	font-weight: 700;
 	border: none;
 	border-top: $brand-primary solid 5px;
+
+	.navbar-brand img{
+			height: 70px;
+			margin-top: -25px;
+	}
+
+	.active a{
+
+		  
+
+	}
+
 }
 
 //== Jumbotron
