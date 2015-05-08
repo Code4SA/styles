@@ -4,21 +4,36 @@
 
 //== Colors
 
-$brand-primary: rgb(0,150,60) !default;
+$color-black: #000;
+$color-white: #fff;
 
-$brand-primary-dark: darken($brand-primary, 8%);
-$brand-primary-darker: darken($brand-primary, 16%);
-$brand-primary-light: ligthen($brand-primary, 8%);
-$brand-primary-lighter: lighten($brand-primary, 16%);
+$color-blue: #3264ab;
+$color-dark-blue: #1e3c66;
+$color-light-blue: #8ac8ff;
+
+$color-red: #ed1c24;
+$color-dark-red: #991217;
+$color-light-red: #ff8067;
+
+$color-green: #339933;
+$color-dark-green: #306030;
+$color-light-green: #99cc99;
+
+$color-gray: #ccc;
+$color-dark-gray: #444444;
+$color-light-gray: #e5e5e5;
+
+$brand-primary: $color-blue;
+
+$brand-primary-dark: darken($brand-primary, 10%);
+$brand-primary-darker: darken($brand-primary, 20%);
+$brand-primary-light: lighten($brand-primary, 10%);
+$brand-primary-lighter: lighten($brand-primary, 20%);
 
 $black: #000;
 $white: #fff;
 
-$gray: #ccc;
-$gray-darker: darken($gray, 16%);
-$gray-dark: darken($gray, 8%);
-$gray-light: lighten($gray, 8%);
-$gray-lighter: lighten($gray, 16%);
+$gray: $color-gray;
 
 //== Typography
 
@@ -38,7 +53,11 @@ $headings-font-weight: 700;
 
 //== Scaffolding
 
-$body-bg: $gray-lighter !default;
+$body-bg: $color-light-gray !default;
+
+$link-color: $brand-primary;
+$link-hover-color: $brand-primary-dark;
+$link-hover-decoration: none;
 
 //** Global text color on `<body>`
 $text-color: $black;
@@ -50,7 +69,7 @@ $navbar-margin-bottom: 0;
 $navbar-border-radius: 0;
 
 $navbar-default-color: $black;
-$navbar-default-bg: $gray-lighter;
+$navbar-default-bg: $color-light-gray;
 $navbar-default-border: none;
 
 $navbar-default-link-color: $black;
@@ -58,7 +77,7 @@ $navbar-default-link-hover-color: $brand-primary;
 $navbar-default-link-hover-bg: transparent !default;
 $navbar-default-link-active-color: $brand-primary !default;
 $navbar-default-link-active-bg: transparent !default;
-$navbar-default-link-disabled-color: $gray-dark !default;
+$navbar-default-link-disabled-color: $color-dark-gray !default;
 $navbar-default-link-disabled-bg: transparent !default;
 
 // Inverted navbar
@@ -72,7 +91,7 @@ $navbar-inverse-link-hover-color:           $white;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $white;
 $navbar-inverse-link-active-bg:             transparent !default;
-$navbar-inverse-link-disabled-color:        $gray-light !default;
+$navbar-inverse-link-disabled-color:        $color-light-gray !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
@@ -94,6 +113,8 @@ $jumbotron-font-size: ceil(($font-size-base * 1.2));
 //== Type
 
 $page-header-border-color: $gray;
+
+$hr-border: rgba(0,0,0,0.1);
 
 // =============================================
 
@@ -176,6 +197,12 @@ body{
 	.container, .container-fluid{
 		background: $white;		
 	}
+	a:link,a:visited,a:active{
+		border-bottom: solid 2px rgba(0,0,0,0.2);
+	}
+	a:hover{
+		border-bottom: solid 2px $brand-primary-dark;
+	}
 }
 
 .page-header{
@@ -205,6 +232,15 @@ h2, h3, h4{
 h5, h6{
 	font-weight: 400;
 	letter-spacing: 2px;
+}
+
+//== Type
+
+hr{
+	display: block; 
+	height: 1px;
+    border: 0;
+    border-top: 2px solid rgba(0,0,0,0.2);
 }
 
 //== Navbar
@@ -262,14 +298,96 @@ h5, h6{
 //== Slabs
 
 @mixin slab{
-
 	padding: 20px;
+	@include bg-texture;
+}
 
+@mixin dark-slab{
+	@include slab;
+	color: $color-white;
+	a:link, a:visited, a:active{
+		color: $brand-primary-light !important;
+		border-bottom: solid 2px rgba(255,255,255,0.2) !important;
+	}
+	a:hover{
+		color: $color-white !important;
+		border-bottom: solid 2px $color-white !important;
+	}
 }
 
 .slab-gray{
 	@include slab;
-	background: $gray;
+	background-color: $color-gray;
+}
+
+.slab-dark-gray{
+	@include dark-slab;
+	background-color: $color-dark-gray;
+}
+
+.slab-light-gray{
+	@include slab;
+	background-color: $color-light-gray;
+}
+
+.slab-dark-blue{
+	@include dark-slab;
+	background-color: $color-dark-blue;
+	a:link, a:visited, a:active{
+		color: $color-light-blue !important;
+	}
+	a:hover{
+		color: $color-white !important;
+		border-bottom: solid 2px $color-white !important;
+	}
+}
+
+.slab-light-blue{
+	@include slab;
+	background-color: $color-light-blue;
+	a:link, a:visited, a:active{
+		color: $color-blue !important;
+	}
+	a:hover{
+		color: $color-dark-blue !important;
+		border-bottom: solid 2px $color-dark-blue !important;
+	}
+}
+
+.slab-dark-red{
+	@include dark-slab;
+	background-color: $color-dark-red;
+	a:link, a:visited, a:active{
+		color: $color-light-red !important;
+	}
+	a:hover{
+		color: $color-white !important;
+		border-bottom: solid 2px $color-white !important;
+	}
+}
+
+.slab-dark-green{
+	@include dark-slab;
+	background-color: $color-dark-green;
+	a:link, a:visited, a:active{
+		color: $color-light-green !important;
+	}
+	a:hover{
+		color: $color-white !important;
+		border-bottom: solid 2px $color-white !important;
+	}
+}
+
+.slab-light-green{
+	@include slab;
+	background-color: $color-light-green;
+	a:link, a:visited, a:active{
+		color: $color-green !important;
+	}
+	a:hover{
+		color: $color-dark-green !important;
+		border-bottom: solid 2px $color-dark-green !important;
+	}
 }
 
 //== Helper classes
