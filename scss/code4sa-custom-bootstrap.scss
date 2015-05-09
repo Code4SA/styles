@@ -175,12 +175,6 @@ $hr-border: rgba(0,0,0,0.1);
 
 // CODE4SA BOOTSTRAP CUSTOM STYLING
 
-//== custom variables
-
-$chimney-size: 20px;
-$chimney-size-sm: 10px;
-$chimney-size-lg: 30px;
-
 //== mixins
 
 @mixin bg-texture{
@@ -267,11 +261,9 @@ hr{
 	}
 
 	a{
-
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-size: 0.9em;
-
 	}
 
 }
@@ -298,8 +290,17 @@ hr{
 //== Slabs
 
 @mixin slab{
-	padding: 20px;
 	@include bg-texture;
+	padding: 20px;
+	color: $color-black;
+	a:link, a:visited, a:active{
+		color: $brand-primary !important;
+		border-bottom: solid 2px rgba(0,0,0,0.2) !important;
+	}
+	a:hover{
+		color: $brand-primary-dark !important;
+		border-bottom: solid 2px $brand-primary-dark !important;
+	}
 }
 
 @mixin dark-slab{
@@ -391,12 +392,25 @@ hr{
 }
 
 //== Helper classes
+
+// Extra margins
+.add-margin-top{
+	margin-top: 50px;
+}
+
+// Chimneys
 .chimney{
-	margin-top: (0 - $chimney-size);
+	margin-top: -40px;
 }
 .chimney-sm{
-	margin-top: (0 - $chimney-size-sm);
+	margin-top: -30px;
 }
 .chimney-lg{
-	margin-top: (0 - $chimney-size-lg);
+	margin-top: -60px;
+}
+/*Undo chimney on small screens*/
+@media (max-width: 978px) {
+	.chimney, .chimney-sm, .chimney-lg{
+		margin-top: 0;
+	}
 }
