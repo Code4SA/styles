@@ -456,7 +456,7 @@ blockquote, blockquote.blockquote-reverse{
 
 .billboard{
 	padding: 15px;
-	margin: 5px;
+	margin: 5px 5px 15px 5px;
 	border: solid 1px $color-gray;
 	border-radius: 5px;
 
@@ -478,7 +478,7 @@ blockquote, blockquote.blockquote-reverse{
 
 .teaser{
 
-	margin: 5px;
+	margin: 5px 5px 15px 5px;
 	border: solid 1px $color-gray;
 
 	font-size: $font-size-small;
