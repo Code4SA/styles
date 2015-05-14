@@ -455,12 +455,17 @@ blockquote, blockquote.blockquote-reverse{
 //== Billboards
 
 .billboard{
+
 	padding: 15px;
 	margin: 5px 5px 15px 5px;
 	border: solid 1px $color-gray;
 	border-radius: 5px;
-
 	text-align: center;
+
+	/* box-shadow */
+	-moz-box-shadow:    0 2px 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 1px 1px rgba(0,0,0,0.2);
+	box-shadow:         0 2px 1px 1px rgba(0,0,0,0.2);	
 
 	img{
 		margin: 15px;
