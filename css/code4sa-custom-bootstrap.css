@@ -5641,7 +5641,8 @@ body {
   @extends %bg-texture; }
 
 #content .container, #content .container-fluid {
-  background: #fff; }
+  background: #fff;
+  padding-bottom: 15px; }
 #content a:link, #content a:visited, #content a:active {
   border-bottom: solid 2px rgba(0, 0, 0, 0.2); }
 #content a:hover {
@@ -5883,6 +5884,19 @@ blockquote, blockquote.blockquote-reverse {
   .slab-light-green a:hover {
     color: #306030 !important;
     border-bottom: solid 2px #306030 !important; }
+
+.billboard {
+  padding: 15px;
+  margin: 5px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  text-align: center; }
+  .billboard img {
+    margin: 15px; }
+  .billboard strong {
+    font-family: "Arvo", Times, serif;
+    display: block;
+    font-size: 19.6px; }
 
 .add-margin-top {
   margin-top: 50px; }

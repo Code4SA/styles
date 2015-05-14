@@ -193,7 +193,8 @@ body{
 
 #content{
 	.container, .container-fluid{
-		background: $white;		
+		background: $white;
+		padding-bottom: 15px;
 	}
 	a:link,a:visited,a:active{
 		border-bottom: solid 2px rgba(0,0,0,0.2);
@@ -448,6 +449,28 @@ blockquote, blockquote.blockquote-reverse{
 		color: $color-dark-green !important;
 		border-bottom: solid 2px $color-dark-green !important;
 	}
+}
+
+//== Billboards
+
+.billboard{
+	padding: 15px;
+	margin: 5px;
+	border: solid 1px $color-gray;
+	border-radius: 5px;
+
+	text-align: center;
+
+	img{
+		margin: 15px;
+	}
+
+	strong{
+		font-family: $font-family-serif;
+		display: block;
+		font-size: $font-size-base * 1.4;
+	}
+
 }
 
 //== Helper classes
