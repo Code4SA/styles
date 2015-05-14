@@ -474,6 +474,51 @@ blockquote, blockquote.blockquote-reverse{
 
 }
 
+//== Teasers
+
+.teaser{
+
+	margin: 5px;
+	border: solid 1px $color-gray;
+
+	font-size: $font-size-small;
+
+	.teaser-header{
+
+		text-align: center;
+		border-bottom: solid 1px $color-gray;
+		padding: 15px;
+
+		img{
+
+			margin: 15px;
+		
+		}
+
+	}
+
+	.teaser-body{
+
+		h1{
+			font-family: $font-family-serif;
+			font-size: $font-size-large;
+			text-transform: none;
+		}
+
+		h2{
+			font-family: $font-family-sans-serif;
+			font-size: $font-size-small;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		padding: 15px;
+
+	}
+
+}
+
 //== Helper classes
 
 // Extra margins

@@ -5899,6 +5899,29 @@ blockquote, blockquote.blockquote-reverse {
     display: block;
     font-size: 19.6px; }
 
+.teaser {
+  margin: 5px;
+  border: solid 1px #ccc;
+  font-size: 12px; }
+  .teaser .teaser-header {
+    text-align: center;
+    border-bottom: solid 1px #ccc;
+    padding: 15px; }
+    .teaser .teaser-header img {
+      margin: 15px; }
+  .teaser .teaser-body {
+    padding: 15px; }
+    .teaser .teaser-body h1 {
+      font-family: "Arvo", Times, serif;
+      font-size: 18px;
+      text-transform: none; }
+    .teaser .teaser-body h2 {
+      font-family: "Asap", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+
 .add-margin-top {
   margin-top: 50px; }
 
