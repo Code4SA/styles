@@ -5693,6 +5693,7 @@ blockquote, blockquote.blockquote-reverse {
   -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px rgba(0, 0, 0, 0.2); }
   .navbar .navbar-brand {
+    font-size: 19.6px;
     padding-right: 30px; }
     .navbar .navbar-brand img {
       height: 60px;
