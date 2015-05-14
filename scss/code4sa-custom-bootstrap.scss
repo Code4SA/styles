@@ -527,6 +527,58 @@ blockquote, blockquote.blockquote-reverse{
 
 }
 
+//== Footer
+
+.footer{
+	background: $color-dark-gray;
+	font-size: $font-size-small;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top: 30px;
+	border-top: solid 5px $brand-primary;
+	color: $color-gray;
+
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+
+	li{
+		display: block;
+	}
+
+	a:link,a:visited,a:active{
+		color: $color-gray;
+		font-weight: 700;
+	}
+
+	a:hover{
+		color: $brand-primary-lighter;
+	}
+
+	a.footer-heading{
+		font-size: $font-size-large;
+		color: $color-white;
+	}
+
+	a.footer-heading:hover{
+		color: $brand-primary-lighter;
+	}
+
+}
+
+.foot{
+	background: $color-black;
+	color: $color-gray;
+	font-size: $font-size-small;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	img{
+		height: 50px;
+		width: auto;
+	}
+}
+
 //== Helper classes
 
 // Extra margins

@@ -5928,6 +5928,40 @@ blockquote, blockquote.blockquote-reverse {
       text-transform: uppercase;
       letter-spacing: 2px; }
 
+.footer {
+  background: #444444;
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  border-top: solid 5px #3264ab;
+  color: #ccc; }
+  .footer ul {
+    list-style: none;
+    padding: 0; }
+  .footer li {
+    display: block; }
+  .footer a:link, .footer a:visited, .footer a:active {
+    color: #ccc;
+    font-weight: 700; }
+  .footer a:hover {
+    color: #6e99d5; }
+  .footer a.footer-heading {
+    font-size: 18px;
+    color: #fff; }
+  .footer a.footer-heading:hover {
+    color: #6e99d5; }
+
+.foot {
+  background: #000;
+  color: #ccc;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .foot img {
+    height: 50px;
+    width: auto; }
+
 .add-margin-top {
   margin-top: 50px; }
 
