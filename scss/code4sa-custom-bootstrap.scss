@@ -1,6 +1,12 @@
 // Code 4 SA variables
 @import "variables";
 
+// work around a bug in pyscss that doesn't include a trailing ; at the end of
+// @import directives without this
+html {
+  display: block;
+}
+
 // =============================================
 // IMPORT BOOTSTRAP
 
