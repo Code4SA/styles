@@ -33,8 +33,6 @@ $brand-primary-lighter: lighten($brand-primary, 20%);
 $black: #000;
 $white: #fff;
 
-$gray: $color-gray;
-
 //== Typography
 
 @import url(http://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic);
@@ -111,8 +109,6 @@ $jumbotron-heading-color: inherit !default;
 $jumbotron-font-size: ceil(($font-size-base * 1.2));
 
 //== Type
-
-$page-header-border-color: $gray;
 
 $hr-border: rgba(0,0,0,0.1);
 
