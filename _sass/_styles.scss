@@ -1,12 +1,5 @@
 //== Scaffolding
     
-#content {
-  .container, .container-fluid {
-    background: $color-white;
-    padding-bottom: 15px;
-  }
-}
-
 .page-header {
   margin: 20px 0 20px;
   padding: 5px 0 5px;
@@ -139,8 +132,6 @@ a:hover {
       margin: 20px;
     }
   }
-
-
 }
 
 //== Jumbotron
@@ -165,52 +156,64 @@ a:hover {
   }
 }
 
-//== Slabs
+//== Backgrounds
 
-@mixin slab {
-  padding: 20px;
+@mixin bg-light {
   color: $color-black;
+
   a:link, a:visited, a:active {
-    color: $brand-primary !important;
-    border-bottom: solid 2px rgba(0,0,0,0.2) !important;
+    color: $brand-primary-light;
+    border-bottom: solid 2px rgba(0,0,0,0.2);
   }
+
   a:hover {
-    color: $brand-primary-dark !important;
-    border-bottom: solid 2px $brand-primary-dark !important;
+    color: $brand-primary-dark;
+    border-bottom: solid 2px $brand-primary-dark;
   }
 }
+.bg-light { @include bg-light; }
 
-@mixin dark-slab {
-  @include slab;
+@mixin bg-dark {
   color: $color-white;
   a:link, a:visited, a:active {
-    color: $brand-primary-light !important;
-    border-bottom: solid 2px rgba(255,255,255,0.2) !important;
+    color: $brand-primary-light;
+    border-bottom: solid 2px rgba(255,255,255,0.2);
   }
   a:hover {
-    color: $color-white !important;
-    border-bottom: solid 2px $color-white !important;
+    color: $color-white;
+    border-bottom: solid 2px $color-white;
   }
 }
+.bg-dark { @include bg-dark; }
 
-.slab-gray {
-  @include slab;
+@mixin bg-white {
+  @include bg-light;
+  background-color: $color-white;
+}
+.bg-white { @include bg-white; }
+
+@mixin bg-gray {
+  @include bg-light;
   background-color: $color-gray;
 }
+.bg-gray { @include bg-gray; }
 
-.slab-dark-gray {
-  @include dark-slab;
+@mixin bg-dark-gray {
+  @include bg-dark;
   background-color: $color-dark-gray;
 }
+.bg-dark-gray { @include bg-dark-gray; }
 
-.slab-light-gray {
-  @include slab;
+@mixin bg-light-gray {
+  @include bg-light;
   background-color: $color-light-gray;
 }
+.bg-light-gray { @include bg-light-gray; }
 
-.slab-dark-blue {
-  @include dark-slab;
+@mixin bg-dark-blue {
+  @include bg-dark;
   background-color: $color-dark-blue;
+
   a:link, a:visited, a:active {
     color: $color-light-blue !important;
   }
@@ -219,9 +222,10 @@ a:hover {
     border-bottom: solid 2px $color-white !important;
   }
 }
+.bg-dark-blue { @include bg-dark-blue; }
 
-.slab-light-blue {
-  @include slab;
+@mixin bg-light-blue {
+  @include bg-light;
   background-color: $color-light-blue;
   a:link, a:visited, a:active {
     color: $color-blue !important;
@@ -231,9 +235,10 @@ a:hover {
     border-bottom: solid 2px $color-dark-blue !important;
   }
 }
+.bg-light-blue { @include bg-light-blue; }
 
-.slab-dark-red {
-  @include dark-slab;
+@mixin bg-dark-red {
+  @include bg-dark;
   background-color: $color-dark-red;
   a:link, a:visited, a:active {
     color: $color-light-red !important;
@@ -243,9 +248,10 @@ a:hover {
     border-bottom: solid 2px $color-white !important;
   }
 }
+.bg-dark-red { @include bg-dark-red; }
 
-.slab-dark-green {
-  @include dark-slab;
+@mixin bg-dark-green {
+  @include bg-dark;
   background-color: $color-dark-green;
   a:link, a:visited, a:active {
     color: $color-light-green !important;
@@ -255,9 +261,10 @@ a:hover {
     border-bottom: solid 2px $color-white !important;
   }
 }
+.bg-dark-green { @include bg-dark-green; }
 
-.slab-light-green {
-  @include slab;
+@mixin bg-light-green {
+  @include bg-light;
   background-color: $color-light-green;
   a:link, a:visited, a:active {
     color: $color-green !important;
@@ -266,6 +273,59 @@ a:hover {
     color: $color-dark-green !important;
     border-bottom: solid 2px $color-dark-green !important;
   }
+}
+.bg-light-green { @include bg-light-green; }
+
+//== Slabs
+
+@mixin slab {
+  padding: 20px;
+}
+.slab { @include slab; }
+
+.slab-white {
+  @include slab;
+  @include bg-white;
+}
+
+.slab-gray {
+  @include slab;
+  @include bg-gray;
+}
+
+.slab-dark-gray {
+  @include slab;
+  @include bg-dark-gray;
+}
+
+.slab-light-gray {
+  @include slab;
+  @include bg-light-gray;
+}
+
+.slab-dark-blue {
+  @include slab;
+  @include bg-dark-blue;
+}
+
+.slab-light-blue {
+  @include slab;
+  @include bg-light-blue;
+}
+
+.slab-dark-red {
+  @include slab;
+  @include bg-dark-red;
+}
+
+.slab-dark-green {
+  @include slab;
+  @include bg-dark-green;
+}
+
+.slab-light-green {
+  @include slab;
+  @include bg-light-green;
 }
 
 //== Billboards
