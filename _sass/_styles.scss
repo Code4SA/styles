@@ -1,5 +1,4 @@
 //== Scaffolding
-    
 .page-header {
   margin: 20px 0 20px;
   padding: 5px 0 5px;
@@ -35,7 +34,7 @@ h5, h6 {
 //== Type
 
 hr {
-  display: block; 
+  display: block;
   height: 1px;
     border: 0;
     border-top: 2px solid rgba(0,0,0,0.2);
@@ -73,7 +72,7 @@ a:hover {
 
   -moz-box-shadow:    0 5px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 5px rgba(0,0,0,0.2);
-  box-shadow:         0 5px rgba(0,0,0,0.2);  
+  box-shadow:         0 5px rgba(0,0,0,0.2);
 
   .navbar-brand {
     font-size: $font-size-base * 1.4;
@@ -88,8 +87,8 @@ a:hover {
 
   .navbar-brand-secondary {
 
-    display: table;
-    clear: both;
+    display: inline-block;
+    padding-left: 10px;
 
     img {
       margin: -4px 0 20px 0;
@@ -101,7 +100,6 @@ a:hover {
       }
 
   }
-
 
   a,
   a:link,
@@ -142,10 +140,10 @@ a:hover {
 
 .jumbotron {
   text-align: center;
-  
+
   /*Outline effect for jumbotron text*/
   text-shadow:
-    -1px -1px 0 rgba(0,0,0,0.3),  
+    -1px -1px 0 rgba(0,0,0,0.3),
     1px -1px 0 rgba(0,0,0,0.3),
     -1px 1px 0 rgba(0,0,0,0.3),
     1px 1px 0 rgba(0,0,0,0.3);
@@ -345,7 +343,7 @@ a:hover {
   /* box-shadow */
   -moz-box-shadow:    0 2px 1px 1px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 2px 1px 1px rgba(0,0,0,0.2);
-  box-shadow:         0 2px 1px 1px rgba(0,0,0,0.2);  
+  box-shadow:         0 2px 1px 1px rgba(0,0,0,0.2);
 
   img {
     margin: 15px;
@@ -377,7 +375,7 @@ a:hover {
     img {
 
       margin: 15px;
-    
+
     }
 
   }
