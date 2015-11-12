@@ -103,10 +103,14 @@ a:hover {
   }
 
 
-  a {
+  a,
+  a:link,
+  a:visited,
+  a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9em;
+    border-bottom: 0px;
   }
 
 }
@@ -420,9 +424,10 @@ a:hover {
     display: block;
   }
 
-  a:link,a:visited,a:active {
+  a:link, a:visited, a:active {
     color: $color-gray;
     font-weight: 700;
+    border-bottom: 0px;
   }
 
   a:hover {
