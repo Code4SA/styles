@@ -5,12 +5,6 @@
     background: $color-white;
     padding-bottom: 15px;
   }
-  a:link,a:visited,a:active {
-    border-bottom: solid 2px rgba(0,0,0,0.2);
-  }
-  a:hover {
-    border-bottom: solid 2px $brand-primary-dark;
-  }
 }
 
 .page-header {
@@ -63,6 +57,14 @@ blockquote, blockquote.blockquote-reverse {
     font-size: $font-size-base * 0.9;
     font-weight: bold;
   }
+}
+
+a:link, a:visited, a:active {
+  border-bottom: solid 2px rgba(0,0,0,0.2);
+}
+
+a:hover {
+  border-bottom: solid 2px $brand-primary-dark;
 }
 
 //== Navbar
