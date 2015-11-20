@@ -403,12 +403,14 @@ a:hover {
   }
 
   a:link, a:visited, a:active {
+    text-decoration: none;
     color: $color-gray;
     font-weight: 700;
   }
 
   a:hover {
     color: $brand-primary-lighter;
+    text-decoration: underline;
   }
 
   a.footer-heading {
@@ -423,11 +425,14 @@ a:hover {
 }
 
 .foot {
+  @include bg-dark-gray;
+
   background: $color-black;
   color: $color-gray;
   font-size: $font-size-small;
   padding-top: 20px;
   padding-bottom: 20px;
+
   img {
     height: 50px;
     width: auto;
