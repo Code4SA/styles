@@ -138,21 +138,15 @@ a:hover {
 
 .jumbotron {
   text-align: center;
-
-  /*Outline effect for jumbotron text*/
-  text-shadow:
-    -1px -1px 0 rgba(0,0,0,0.3),
-    1px -1px 0 rgba(0,0,0,0.3),
-    -1px 1px 0 rgba(0,0,0,0.3),
-    1px 1px 0 rgba(0,0,0,0.3);
-
   margin: 0;
+
   h1 {
     font-size: floor(($jumbotron-font-size * 2.6));
   }
 
   a:link, a:visited, a:active {
-    color: $color-light-blue !important;
+    color: $color-light-blue;
+    text-decoration: none;
   }
 }
 
